@@ -1,0 +1,36 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  font: 14px "Arial";
+
+}
+
+.productName {
+  min-width: 300px;
+  margin-right: auto;
+}
+
+.productPartNo {
+  text-align: center;
+  width: 100px;
+}
+
+.productPrice{
+  text-align: right;
+  width: 100px;
+}
+
+.term {
+  text-align: center;
+  width: 100px;
+}
+
+.count {
+  text-align: center;
+  width: 100px;
+}
+
+.sum {
+  text-align: right;
+  width: 100px;
+}

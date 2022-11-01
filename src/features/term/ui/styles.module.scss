@@ -1,0 +1,50 @@
+.root{
+    display: flex;
+    justify-content: center;
+    font: bold 16px "Arial";
+    line-height: 30px;
+}
+
+.label {
+    margin-right: 20px;
+}
+
+.action {
+    background-color: #fff;
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+    transition: 0.2s;
+
+    &:first-child {
+        margin-right: 10px;
+    }
+
+    &:last-child {
+        margin-left: 10px;
+    }
+
+
+    &:hover {
+        background-color: rgba(128, 128, 128, 0.1);
+        cursor: pointer;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+    }
+}
+
+.count {
+    font: 14px "Arial";
+    width: 19px;
+    text-align: center;
+}
+
+.subTotal {
+    font: 14px "Arial";
+    text-align: right;
+    width: 100px;
+}

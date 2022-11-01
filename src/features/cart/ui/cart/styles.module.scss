@@ -1,0 +1,87 @@
+.root {
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    min-width: 400px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    font: bold 20px "Arial";
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.products {
+    margin-top: 20px;
+    margin-bottom: auto;
+    width: 100%;
+}
+
+.product {
+    margin-bottom: 10px;
+}
+
+.clearAction {
+    background-color: #fff;
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 4px 10px;
+    height: 30px;
+    transition: 0.2s;
+    font: 16px "Arial";
+
+    &:hover {
+        background-color: rgba(128, 128, 128, 0.1);
+        cursor: pointer;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+    }
+}
+
+.label {
+    display: flex;
+    justify-content: space-between;
+    font: bold 16px "Arial";
+    width: 100%;
+}
+
+.productName {
+    text-align: center;
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.productPartNo {
+    text-align: center;
+    width: 100px;
+}
+
+.productPrice {
+    text-align: right;
+    width: 100px;
+}
+
+.term {
+    text-align: center;
+    width: 100px;
+}
+
+.count {
+    text-align: center;
+    width: 100px;
+}
+
+.sum {
+    text-align: right;
+    width: 100px;
+}
+
+.total {
+    margin-left: auto;
+}

@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Provider } from 'react-redux';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import { ROUTES } from './constants/routes';
+import { MainLayout } from './features/layout/ui/main-layout/component';
+import { UnitContainer } from './features/unit/ui/unit/container';
+import { TermsPage } from './pages/terms/component';
+import { UnitPage } from './pages/units/component';
+import { store } from './root-module';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route path={ROUTES.Units} element={<UnitPage />}>
+              <Route path={ROUTES.Unit} element={<UnitContainer />} />
+            </Route>
+            <Route path={ROUTES.Terms} element={<TermsPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
